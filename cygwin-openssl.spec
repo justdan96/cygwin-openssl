@@ -28,10 +28,10 @@ BuildRequires:  cygwin64-gcc
 BuildRequires:  cygwin64
 BuildRequires:  cygwin64-zlib
 
-BuildRequires:  mktemp
 BuildRequires:  perl
 BuildRequires:  sed
 BuildRequires:  /usr/bin/cmp
+BuildRequires:  /usr/bin/mktemp
 BuildRequires:  /usr/bin/rename
 # The build script uses /usr/bin/makedepend which comes from imake.
 # We also use lndir below to set up duplicate build trees
