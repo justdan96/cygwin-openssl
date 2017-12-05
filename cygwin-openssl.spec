@@ -3,7 +3,7 @@
 %define soversion 1.0.0
 
 Name:           cygwin-openssl
-Version:        1.0.2h
+Version:        1.0.2m
 Release:        1%{?dist}
 Summary:        Cygwin port of the OpenSSL toolkit
 
@@ -13,7 +13,7 @@ URL:            http://www.openssl.org/
 BuildArch:      noarch
 
 Source0:        http://www.openssl.org/source/openssl-%{version}.tar.gz
-Patch0:         openssl-1.0.2a-enginesdir.patch
+Patch0:         openssl-1.0.2i-enginesdir.patch
 Patch1:         openssl-1.0.2-debuginfo.patch
 
 BuildRequires:  cygwin32-filesystem
@@ -44,8 +44,6 @@ OpenSSL encryption toolkit for Cygwin toolchains.
 %package -n cygwin32-openssl
 Summary:        Cygwin32 OpenSSL libraries
 Group:          Development/Libraries
-Provides:       %{name} = %{version}-%{release}
-Obsoletes:      %{name} < %{version}-%{release}
 
 %description -n cygwin32-openssl
 OpenSSL encryption toolkit for the Cygwin i686 toolchain.
@@ -155,6 +153,9 @@ rm -rf $RPM_BUILD_ROOT%{cygwin64_mandir}
 
 
 %changelog
+* Tue Dec 05 2017 Yaakov Selkowitz <yselkowi@redhat.com> - 1.0.2m-1
+- new version
+
 * Sun Sep 11 2016 Yaakov Selkowitz <yselkowi@redhat.com> - 1.0.2h-1
 - Version bump.
 
