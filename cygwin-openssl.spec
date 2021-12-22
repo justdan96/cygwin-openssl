@@ -109,11 +109,13 @@ popd
 rm -f $RPM_BUILD_ROOT%{cygwin32_bindir}/c_rehash
 rm -f $RPM_BUILD_ROOT%{cygwin32_bindir}/*.exe
 rm -rf $RPM_BUILD_ROOT%{cygwin32_libdir}/engines/
+rm -rf $RPM_BUILD_ROOT%{cygwin32_libdir}/engines-%{soversion}/
 rm -rf $RPM_BUILD_ROOT%{cygwin32_prefix}/ssl
 
 rm -f $RPM_BUILD_ROOT%{cygwin64_bindir}/c_rehash
 rm -f $RPM_BUILD_ROOT%{cygwin64_bindir}/*.exe
 rm -rf $RPM_BUILD_ROOT%{cygwin64_libdir}/engines/
+rm -rf $RPM_BUILD_ROOT%{cygwin64_libdir}/engines-%{soversion}/
 rm -rf $RPM_BUILD_ROOT%{cygwin64_prefix}/ssl
 
 # Documentation already provided by Fedora native package
@@ -128,6 +130,8 @@ rm -rf $RPM_BUILD_ROOT%{cygwin64_mandir}
 %{cygwin32_includedir}/openssl
 %{cygwin32_libdir}/libcrypto.dll.a
 %{cygwin32_libdir}/libssl.dll.a
+%{cygwin32_libdir}/libcrypto.dll
+%{cygwin32_libdir}/libssl.dll
 %{cygwin32_libdir}/pkgconfig/libcrypto.pc
 %{cygwin32_libdir}/pkgconfig/libssl.pc
 %{cygwin32_libdir}/pkgconfig/openssl.pc
@@ -139,6 +143,8 @@ rm -rf $RPM_BUILD_ROOT%{cygwin64_mandir}
 %{cygwin64_includedir}/openssl
 %{cygwin64_libdir}/libcrypto.dll.a
 %{cygwin64_libdir}/libssl.dll.a
+%{cygwin64_libdir}/libcrypto.a
+%{cygwin64_libdir}/libssl.a
 %{cygwin64_libdir}/pkgconfig/libcrypto.pc
 %{cygwin64_libdir}/pkgconfig/libssl.pc
 %{cygwin64_libdir}/pkgconfig/openssl.pc
