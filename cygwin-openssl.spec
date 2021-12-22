@@ -99,10 +99,10 @@ popd
 
 %install
 pushd build_32bit
-make INSTALL_PREFIX=$RPM_BUILD_ROOT install_sw EXE_EXT=.exe
+make DESTDIR=$RPM_BUILD_ROOT install_sw EXE_EXT=.exe
 popd
 pushd build_64bit
-make INSTALL_PREFIX=$RPM_BUILD_ROOT install_sw EXE_EXT=.exe
+make DESTDIR=$RPM_BUILD_ROOT install_sw EXE_EXT=.exe
 popd
 
 # Remove unnecessary Cygwin native binaries and runtime files
