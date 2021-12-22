@@ -3,7 +3,7 @@
 %define soversion 1.0.0
 
 Name:           cygwin-openssl
-Version:        1.0.2m
+Version:        1.1.1m
 Release:        1%{?dist}
 Summary:        Cygwin port of the OpenSSL toolkit
 
@@ -153,6 +153,9 @@ rm -rf $RPM_BUILD_ROOT%{cygwin64_mandir}
 
 
 %changelog
+* Wed Dec 22 2021 Dan Bryant <daniel.bryant@linux.com> - 1.1.1m-1
+- new version
+
 * Tue Dec 05 2017 Yaakov Selkowitz <yselkowi@redhat.com> - 1.0.2m-1
 - new version
 
