@@ -1,6 +1,6 @@
 %{?cygwin_package_header}
 
-%define soversion 1.0.0
+%define soversion 1.1
 
 Name:           cygwin-openssl
 Version:        1.1.1m
