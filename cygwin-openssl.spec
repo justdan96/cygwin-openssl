@@ -130,8 +130,8 @@ rm -rf $RPM_BUILD_ROOT%{cygwin64_mandir}
 %{cygwin32_includedir}/openssl
 %{cygwin32_libdir}/libcrypto.dll.a
 %{cygwin32_libdir}/libssl.dll.a
-%{cygwin32_libdir}/libcrypto.dll
-%{cygwin32_libdir}/libssl.dll
+%{cygwin32_libdir}/libcrypto.a
+%{cygwin32_libdir}/libssl.a
 %{cygwin32_libdir}/pkgconfig/libcrypto.pc
 %{cygwin32_libdir}/pkgconfig/libssl.pc
 %{cygwin32_libdir}/pkgconfig/openssl.pc
