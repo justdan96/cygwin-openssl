@@ -76,8 +76,8 @@ pushd build_32bit
 ./Configure \
   --prefix=%{cygwin32_prefix} \
   --cross-compile-prefix=%{cygwin32_target}- \
-  shared zlib enable-seed enable-tlsext enable-rfc3779 enable-camellia \
-  enable-cms enable-md2 enable-rc5 no-krb5 Cygwin
+  shared zlib enable-seed enable-rfc3779 enable-camellia \
+  enable-cms enable-md2 enable-rc5 Cygwin
 
 make depend
 make all build-shared
@@ -89,8 +89,8 @@ pushd build_64bit
 ./Configure \
   --prefix=%{cygwin64_prefix} \
   --cross-compile-prefix=%{cygwin64_target}- \
-  shared zlib enable-seed enable-tlsext enable-rfc3779 enable-camellia \
-  enable-cms enable-md2 enable-rc5 no-krb5 Cygwin-x86_64
+  shared zlib enable-seed enable-rfc3779 enable-camellia \
+  enable-cms enable-md2 enable-rc5 Cygwin-x86_64
 
 make depend
 make all build-shared OPT_CFLAGS="$CFLAGS" EXE_EXT=.exe
