@@ -13,8 +13,6 @@ URL:            http://www.openssl.org/
 BuildArch:      noarch
 
 Source0:        http://www.openssl.org/source/openssl-%{version}.tar.gz
-Patch0:         openssl-1.0.2i-enginesdir.patch
-Patch1:         openssl-1.0.2-debuginfo.patch
 
 BuildRequires:  cygwin32-filesystem
 BuildRequires:  cygwin32-binutils
