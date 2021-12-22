@@ -58,8 +58,6 @@ OpenSSL encryption toolkit for the Cygwin x86_64 toolchain.
 
 %prep
 %setup -q -n openssl-%{version}
-%patch0 -p1
-%patch1 -p2
 
 if ! iconv -f UTF-8 -t ASCII//TRANSLIT CHANGES >/dev/null 2>&1 ; then
   iconv -f ISO-8859-1 -t UTF-8 -o CHANGES.utf8 CHANGES && \
