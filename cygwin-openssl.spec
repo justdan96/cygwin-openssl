@@ -80,7 +80,7 @@ pushd build_32bit
   enable-cms enable-md2 enable-rc5 Cygwin
 
 make depend
-make all build-shared
+make all EXE_EXT=.exe
 popd
 
 
@@ -93,7 +93,7 @@ pushd build_64bit
   enable-cms enable-md2 enable-rc5 Cygwin-x86_64
 
 make depend
-make all build-shared OPT_CFLAGS="$CFLAGS" EXE_EXT=.exe
+make all EXE_EXT=.exe
 popd
 
 
@@ -104,10 +104,6 @@ popd
 pushd build_64bit
 make INSTALL_PREFIX=$RPM_BUILD_ROOT install_sw EXE_EXT=.exe
 popd
-
-# Remove unnecessary static libraries
-rm -f $RPM_BUILD_ROOT%{cygwin32_libdir}/lib{crypto,ssl}.a
-rm -f $RPM_BUILD_ROOT%{cygwin64_libdir}/lib{crypto,ssl}.a
 
 # Remove unnecessary Cygwin native binaries and runtime files
 rm -f $RPM_BUILD_ROOT%{cygwin32_bindir}/c_rehash
