@@ -3,7 +3,7 @@
 %define soversion 1.1
 
 Name:           cygwin-openssl
-Version:        1.1.1m
+Version:        1.1.1n
 Release:        1%{?dist}
 Summary:        Cygwin port of the OpenSSL toolkit
 
