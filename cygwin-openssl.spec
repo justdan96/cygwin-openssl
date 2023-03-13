@@ -1,9 +1,11 @@
 %{?cygwin_package_header}
 
 %define soversion 1.1
+%undefine _annotated_build
+%undefine _hardened_build
 
 Name:           cygwin-openssl
-Version:        1.1.1n
+Version:        1.1.1t
 Release:        1%{?dist}
 Summary:        Cygwin port of the OpenSSL toolkit
 
@@ -151,6 +153,9 @@ rm -rf $RPM_BUILD_ROOT%{cygwin64_mandir}
 
 
 %changelog
+* Mon Mar 13 2023 Dan Bryant <daniel.bryant@linux.com> - 1.1.1t-1
+- new version
+
 * Wed Dec 22 2021 Dan Bryant <daniel.bryant@linux.com> - 1.1.1m-1
 - new version
 
