@@ -5,7 +5,7 @@
 %undefine _hardened_build
 
 Name:           cygwin-openssl
-Version:        1.1.1t
+Version:        1.1.1u
 Release:        1%{?dist}
 Summary:        Cygwin port of the OpenSSL toolkit
 
@@ -153,6 +153,9 @@ rm -rf $RPM_BUILD_ROOT%{cygwin64_mandir}
 
 
 %changelog
+* Fri Jul 13 2023 Dan Bryant <daniel.bryant@linux.com> - 1.1.1u-1
+- new version
+
 * Mon Mar 13 2023 Dan Bryant <daniel.bryant@linux.com> - 1.1.1t-1
 - new version
 
