@@ -2,6 +2,8 @@ default:
   just --list
 
 build:
-  DOCKER_BUILDKIT=1 docker build --target export -t cygwin-openssl --build-arg FEDORA_IMAGE=fedora:36 . --output out
-  DOCKER_BUILDKIT=1 docker build --target export -t cygwin-openssl --build-arg FEDORA_IMAGE=fedora:37 . --output out
-  DOCKER_BUILDKIT=1 docker build --target export -t cygwin-openssl --build-arg FEDORA_IMAGE=fedora:38 . --output out
+  cp ../cygwin-openssl.spec .
+  DOCKER_BUILDKIT=1 docker build --target export -t cygwin-openssl --build-arg FEDORA_IMAGE=fedora:40 . --output out
+  DOCKER_BUILDKIT=1 docker build --target export -t cygwin-openssl --build-arg FEDORA_IMAGE=fedora:41 . --output out
+  DOCKER_BUILDKIT=1 docker build --target export -t cygwin-openssl --build-arg FEDORA_IMAGE=fedora:42 . --output out
+  rm -f cygwin-openssl.spec
